@@ -1,0 +1,75 @@
+.button-primary {
+  font-family: "Satoshi";
+  background-color: #ff8201;
+  color: white;
+  font-size: 1.4vw;
+  border: 0px;
+  border-radius: 6px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 32px;
+  padding-right: 32px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button-primary:hover,
+.button-primary-fullwidth:hover {
+  background-color: #f9922c;
+  filter: drop-shadow(1px 1px 10px #ff8201);
+}
+
+.button-primary-outline {
+  font-family: "Satoshi";
+  background-color: #ff800100;
+  color: #ff8201;
+  font-size: 1.4vw;
+  border: 2px;
+  border-style: solid;
+  border-color: #ff8201;
+  border-radius: 6px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 32px;
+  padding-right: 32px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.button-primary-outline:hover {
+  background-color: #ff800042;
+}
+
+.button-primary-fullwidth {
+  font-family: "Satoshi";
+  background-color: #ff8201;
+  color: white;
+  font-size: 1.4vw;
+  border: 0px;
+  border-radius: 6px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 32px;
+  padding-right: 32px;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.2s;
+}
+
+@media (max-width: 950px) {
+  .button-primary {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .button-primary-fullwidth {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .button-primary-outline {
+    font-size: 14px;
+    width: 100%;
+  }
+}
