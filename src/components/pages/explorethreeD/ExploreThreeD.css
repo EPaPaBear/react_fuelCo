@@ -1,0 +1,21 @@
+.model-section {
+  background-color: black;
+}
+
+.threeD-scene-container {
+  margin: 0 auto 2rem auto;
+  width: 90%;
+  height: 70vh;
+}
+
+.controls {
+  bottom: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding-bottom: 5rem;
+}
+
+.loader {
+  color: white;
+}

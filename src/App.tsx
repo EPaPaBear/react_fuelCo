@@ -10,6 +10,7 @@ import SmartlineC from "./components/pages/dispensers/pages/SmartlineC";
 import SmartlineL from "./components/pages/dispensers/pages/SmartlineL";
 import SmartlineLX from "./components/pages/dispensers/pages/SmartlineLX";
 import ContactUs from "./components/pages/ContactUs";
+import ExploreThreeD from "./components/pages/ExploreThreeD";
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="dispensers/smartline_c" element={<SmartlineC />} />
           <Route path="dispensers/smartline_l" element={<SmartlineL />} />
           <Route path="dispensers/smartline_lx" element={<SmartlineLX />} />
+          <Route path="/models" element={<ExploreThreeD />} />
         </Routes>
         <Footer />
       </Router>

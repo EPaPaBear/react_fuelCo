@@ -41,6 +41,13 @@ function Navbar() {
             </Link>
           </li>
           <li>
+            <Link to="/models">
+              <div className={location.pathname === "/models" ? "active" : ""}>
+                Models
+              </div>
+            </Link>
+          </li>
+          <li>
             <Link to="/contact">
               <div className={location.pathname === "/contact" ? "active" : ""}>
                 Contact

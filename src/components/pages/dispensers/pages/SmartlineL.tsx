@@ -7,10 +7,8 @@ import Button from "../../../buttons/Button";
 import "../resuse/Dispensers.css";
 import FeaturesContent from "../resuse/FeaturesContent";
 import { Link } from "react-router-dom";
-import { useGLTF } from "@react-three/drei";
 
 function SmartlineL() {
-  const { scene } = useGLTF("/models/test/smartlineL.glb");
   const featuresAsList: string[] = [
     "Offers various flow rate options - 40, 80, 120 lt/min",
     "Cladded Frame System enabling easy-replacement at the field",
@@ -32,7 +30,7 @@ function SmartlineL() {
             <FaArrowLeft size={"32"} />
           </Link>
         </div>
-        <SummaryViewSection threeDModel={scene}>
+        <SummaryViewSection>
           <SummaryContent
             headerText="Sales Screen"
             paragraphText="New generation backlight sales screen transmits not only sales information to customers but also station information and any other message on the lower section of the screen."
