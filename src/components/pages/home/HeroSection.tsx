@@ -2,7 +2,7 @@ import SubHeaderText from "./reuse/SubHeaderText";
 import HeaderText from "./reuse/HeaderText";
 import PlainText from "./reuse/PlainText";
 import Button from "../../buttons/Button";
-import IMAGES from "../../../assets/images/Images";
+import IMAGES from "../../../assets/Images";
 import "./reuse/Home.css";
 
 function HeroSection() {

@@ -1,4 +1,4 @@
-import IMAGES from "../../../assets/images/Images";
+import IMAGES from "../../../assets/Images";
 import HeaderText from "./reuse/HeaderText";
 import "./reuse/Home.css";
 import PlainText from "./reuse/PlainText";

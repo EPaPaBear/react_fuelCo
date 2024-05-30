@@ -1,7 +1,7 @@
 import { FaArrowLeft } from "react-icons/fa6";
 import FeaturesHero from "../resuse/FeaturesHero";
 import SummaryViewSection from "../resuse/SummaryViewSection";
-import IMAGES from "../../../../assets/images/Images";
+import IMAGES from "../../../../assets/Images";
 import SummaryContent from "../resuse/SummaryContent";
 import Button from "../../../buttons/Button";
 import "../resuse/Dispensers.css";

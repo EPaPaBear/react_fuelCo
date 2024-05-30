@@ -1,5 +1,5 @@
 import "./dispensers/resuse/Dispensers.css";
-import IMAGES from "../../assets/images/Images";
+import IMAGES from "../../assets/Images";
 import HeaderText from "./home/reuse/HeaderText";
 import { Link, useLocation } from "react-router-dom";
 import DispenserCards from "./dispensers/resuse/DispenserCards";

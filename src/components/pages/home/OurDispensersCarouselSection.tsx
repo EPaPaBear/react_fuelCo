@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
-import IMAGES from "../../../assets/images/Images";
+import IMAGES from "../../../assets/Images";
 import "./reuse/Home.css";
 import SubHeaderText from "./reuse/SubHeaderText";
 import HeaderText from "./reuse/HeaderText";

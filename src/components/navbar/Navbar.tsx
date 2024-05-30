@@ -16,11 +16,7 @@ function Navbar() {
       <nav className="navbar">
         <div className={`logo ${showNavbar ? "hide" : ""}`}>
           <Link to="/">
-            <img
-              className="nav-logo"
-              src="src/assets/LogoType.svg"
-              alt="Logo"
-            />
+            <img className="nav-logo" src="/LogoType.svg" alt="Logo" />
           </Link>
         </div>
         <ul className={`nav-links ${showNavbar ? "active" : ""}`}>
