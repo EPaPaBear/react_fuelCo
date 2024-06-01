@@ -1,9 +1,27 @@
+button:disabled {
+  font-family: "Satoshi";
+  background-color: #7e562e;
+  color: white;
+  border: 0px;
+  border-radius: 6px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.link-full {
+  width: 100%;
+}
+
 .button-primary {
   font-family: "Satoshi";
   background-color: #ff8201;
   color: white;
   font-size: 1.4vw;
   border: 0px;
+  height: 100%;
+  width: 100%;
   border-radius: 6px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -27,6 +45,8 @@
   border: 2px;
   border-style: solid;
   border-color: #ff8201;
+  height: 100%;
+  width: 100%;
   border-radius: 6px;
   padding-top: 12px;
   padding-bottom: 12px;
@@ -46,6 +66,8 @@
   color: white;
   font-size: 1.4vw;
   border: 0px;
+  height: 100%;
+  width: 100%;
   border-radius: 6px;
   padding-top: 12px;
   padding-bottom: 12px;

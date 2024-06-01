@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Button.css";
 
 interface props {
@@ -6,6 +7,7 @@ interface props {
   outline?: boolean;
   fullwidth?: boolean;
   onClick?: any;
+  disabled?: any;
 }
 
 const Button = ({
@@ -14,21 +16,25 @@ const Button = ({
   outline = false,
   fullwidth = false,
   onClick,
+  disabled,
 }: props) => {
   return (
     <>
-      <button
-        type="button"
-        onClick={onClick}
-        className={
-          "button-" +
-          type +
-          `${outline ? "-outline" : ""}` +
-          `${fullwidth ? "-fullwidth" : ""}`
-        }
-      >
-        {text}
-      </button>
+      <Link to={"/contact"} className="link-full">
+        <button
+          type="button"
+          onClick={onClick}
+          disabled={disabled}
+          className={
+            "button-" +
+            type +
+            `${outline ? "-outline" : ""}` +
+            `${fullwidth ? "-fullwidth" : ""}`
+          }
+        >
+          {text}
+        </button>
+      </Link>
     </>
   );
 };

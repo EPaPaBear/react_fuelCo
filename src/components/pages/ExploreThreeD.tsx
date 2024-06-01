@@ -63,14 +63,12 @@ function ExploreThreeD() {
 
   const handleNext = () => {
     setCurrentModelIndex((prevIndex) => (prevIndex + 1) % models3D.length);
-    console.log("Current: ", currentModelIndex);
   };
 
   const handlePrev = () => {
     setCurrentModelIndex(
       (prevIndex) => (prevIndex - 1 + models3D.length) % models3D.length
     );
-    console.log("Current: ", currentModelIndex);
   };
 
   return (

@@ -5,10 +5,51 @@ import SubHeaderText from "./home/reuse/SubHeaderText";
 import "../pages/contactUs/ContactUs.css";
 import Button from "../buttons/Button";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useRef, useState } from "react";
+import sendCustomEmail from "../EmailSenderService";
+import Swal from "sweetalert2";
 
 //import React from 'react'
 
 function ContactUs() {
+  const recaptcha = useRef<ReCAPTCHA>(null);
+  const [details, setDetails] = useState({
+    full_name: "",
+    custom_request: "",
+    from_email: "",
+    phone_number: "",
+    company_name: "",
+  });
+
+  const handleDetailsChange = (event: any) => {
+    const { name, value } = event.target;
+    setDetails((previousDetails) => {
+      return {
+        ...previousDetails,
+        [name]: value,
+      };
+    });
+  };
+
+  const handleSendEmail = () => {
+    sendCustomEmail(details);
+  };
+
+  function checkCAPTCHAThenSubmitForm(event: any) {
+    event.preventDefault();
+    const captchaValue = recaptcha.current!.getValue();
+    if (!captchaValue) {
+      Swal.fire({
+        title: "Check CAPTCHA",
+        text: "Cannot verify CAPTCHA. Please tick the box below or refresh the page and try again.",
+        icon: "warning",
+        confirmButtonText: "Continue",
+      });
+    } else {
+      handleSendEmail();
+    }
+  }
+
   return (
     <>
       <section className="contact-us-section">
@@ -42,43 +83,67 @@ function ContactUs() {
           <form action="POST">
             <input
               type="text"
-              name="fullName"
-              id="fullName"
+              name="full_name"
+              id="full_name"
               placeholder="Full Name"
+              value={details.full_name}
+              onChange={handleDetailsChange}
               required
             />
             <input
               type="email"
-              name="email"
-              id="email"
+              name="from_email"
+              id="from_email"
               placeholder="Email Address"
+              value={details.from_email}
+              onChange={handleDetailsChange}
               required
             />
             <div className="company-name-phone">
               <input
                 type="text"
-                name="compName"
-                id="compName"
+                name="company_name"
+                id="company_name"
                 placeholder="Company Name(Optional)"
+                value={details.company_name}
+                onChange={handleDetailsChange}
               />
               <input
                 type="number"
-                name="phone"
-                id="phone"
+                name="phone_number"
+                id="phone_number"
                 placeholder="Phone Number"
+                value={details.phone_number}
+                onChange={handleDetailsChange}
                 required
               />
             </div>
             <textarea
-              name="c_orderReq"
-              id="c_orderReq"
+              name="custom_request"
+              id="custom_request"
               cols={30}
               rows={10}
               placeholder="Custom Order Request ..."
+              value={details.custom_request}
+              onChange={handleDetailsChange}
               required
             ></textarea>
-            <Button text="Submit Request" type="primary" fullwidth={true} />
-            <ReCAPTCHA sitekey={import.meta.env.VITE_SITE_KEY} />
+            <Button
+              text="Submit Request"
+              type="primary"
+              fullwidth={true}
+              disabled={
+                !details.full_name ||
+                !details.from_email ||
+                !details.phone_number ||
+                !details.custom_request
+              }
+              onClick={checkCAPTCHAThenSubmitForm}
+            />
+            <ReCAPTCHA
+              ref={recaptcha}
+              sitekey={import.meta.env.VITE_SITE_KEY}
+            />
           </form>
         </div>
       </section>
