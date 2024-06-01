@@ -2,7 +2,20 @@ import IMAGES from "../../../assets/Images";
 import HeaderText from "./reuse/HeaderText";
 
 function OurPartnersSection() {
-  const images = [IMAGES.IMG_1, IMAGES.IMG_2, IMAGES.IMG_2];
+  const images = [
+    IMAGES.JP_TRUSTEE,
+    IMAGES.BLOOM_PETRROLEUM,
+    IMAGES.DESERT_OIL,
+    IMAGES.ENGEN_PETROLEUM,
+    IMAGES.GLORY_OIL,
+    IMAGES.GSPL,
+    IMAGES.ICON_ENERGY,
+    IMAGES.MAXX,
+    IMAGES.ONYXMA,
+    IMAGES.PETRON,
+    IMAGES.RADIANCE_PETROLEUM,
+    IMAGES.TEL_ENERGY,
+  ];
   return (
     <>
       <section className="our-partners-section">

@@ -46,6 +46,22 @@ const IMAGES = {
   SMARTLINE_LX_TERMINAL: makeURL(
     "/images/smartlineLX/Smartline-L-X-Screen.webp"
   ),
+  BLOOM_PETRROLEUM: makeURL("/images/partners_dispensers/bloom-petroleum.jpeg"),
+  DESERT_OIL: makeURL(
+    "/images/partners_dispensers/desert-oil-ghana-limited.png"
+  ),
+  ENGEN_PETROLEUM: makeURL("/images/partners_dispensers/Engen_Petroleum.png"),
+  GLORY_OIL: makeURL("/images/partners_dispensers/glory-oil.jpeg"),
+  GSPL: makeURL("/images/partners_dispensers/gspl-logo.png"),
+  ICON_ENERGY: makeURL("/images/partners_dispensers/icon-energy.png"),
+  JP_TRUSTEE: makeURL("/images/partners_dispensers/jpTrustee.png"),
+  MAXX: makeURL("/images/partners_dispensers/maxx-logo.png"),
+  ONYXMA: makeURL("/images/partners_dispensers/Onyxma.jpeg"),
+  PETRON: makeURL("/images/partners_dispensers/petron-logo.png"),
+  RADIANCE_PETROLEUM: makeURL(
+    "/images/partners_dispensers/RADIANCE_Petroleum.png"
+  ),
+  TEL_ENERGY: makeURL("/images/partners_dispensers/telenergy-logo.png"),
 };
 
 export default IMAGES;
